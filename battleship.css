@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+	font-family: 'Odibee Sans', cursive;
+	background-color: #000;
+}
+
+#board {
+	width: 1024px;
+	height: 863px;
+	margin: auto;
+	background-image: url("images/board.jpg");
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.board-message {
+	position: absolute;
+	font-size: 50px;
+	padding: 15px;
+	top: 15px;
+	left: 15px;
+	color: rgba(214, 13, 16);
+	box-shadow: 0 10px 10px rgba(0, 0 ,0, .4);
+}
+
+.battleship-table {
+	position:  absolute;
+	left: 173px;
+	top: 98px;
+	border-spacing: 0;
+}
+
+td {
+	width: 96px;
+	height: 95.75px;
+}
+
+.battleship-form {
+	position: fixed;
+	top: 10px;
+	right: 50px;
+	padding: 20px 30px;
+	border-radius: 100px;
+	background-image: linear-gradient(to right bottom, rgba(83, 175, 19), rgba(152, 207, 113));
+
+	display: flex;
+}
+
+.guess-input {
+	padding: 2.5px 5px;
+	background-color: #ccc;
+	border-color: rgba(9, 66, 5);
+	font-size: 1em;
+	font-family: inherit;
+	transition: .2s all;
+}
+
+.guess-input:focus {
+	outline: none;
+	opacity: .7;
+}
+
+.fire-button {
+	display: block;
+	border: none;
+	margin-left: 15px;
+	text-transform: uppercase;
+	padding: 2.5px 5px;
+	font-size: 20px;
+	font-family: inherit;
+	letter-spacing: .8px;
+	background-color: #bbb;
+	cursor: pointer;
+	transition: all .2s;
+}
+
+.fire-button:hover {
+	opacity: .7;
+	transform: translateY(-3px);
+}
+
+.fire-button:active,
+.fire-button:focus {
+	outline: none;
+	transform: translateY(-1px);
+}
+
+.hit {
+	background-image: url("images/ship.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	animation: fadeIn ease-out 1s;	
+}
+
+.miss {
+	background-image: url("images/miss.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	animation: fadeIn ease-out 1s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+
+
+
+
